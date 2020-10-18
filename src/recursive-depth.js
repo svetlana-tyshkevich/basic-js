@@ -11,13 +11,11 @@ module.exports = class DepthCalculator {
       if (Array.isArray(item)) {
         
         counter++;
-          console.log('counter '  + counter + ' maxCount ' + maxCount);
         maxCount = this.calculateDepth(item, counter, maxCount);
         
         maxCount = Math.max(counter, maxCount);
         if (arr[arr.indexOf(item) + 1]) counter--;
-        console.log ('maxCount ' + maxCount);
-        console.log (counter);
+       
          return maxCount;
         } 
        
